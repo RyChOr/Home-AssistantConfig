@@ -1,0 +1,76 @@
+#################################################################
+## Bedtime Automations
+#################################################################
+
+        ##########################################################
+        ## Bedtime
+        ##########################################################
+        
+  - alias: Bedtime
+  
+    trigger:
+      - platform: state
+        entity_id: input_boolean.bedtime
+        to: 'on'
+        for:
+          hours: 0
+          minutes: 5
+          seconds: 0
+    
+    condition:
+      - condition: state
+        entity_id: input_boolean.guest_mode
+        state: 'off'
+    
+    action:
+      - service: lock.lock
+        entity_id: group.all_locks
+      - service: light.turn_off
+        entity_id: group.all_lights
+        
+        ##########################################################
+        ## Bedtime Guest Mode
+        ##########################################################
+        
+  - alias: Bedtime - Guest Mode
+  
+    trigger:
+      - platform: state
+        entity_id: input_boolean.bedtime
+        to: 'on'
+        for:
+          hours: 0
+          minutes: 5
+          seconds: 0
+    
+    condition:
+      - condition: state
+        entity_id: input_boolean.guest_mode
+        state: 'on'
+    
+    action:
+      - service: lock.lock
+        entity_id: group.all_locks
+      - service: light.turn_off
+        entity_id: group.all_lights        
+        
+        ##########################################################
+        ## Reset Bedtime Switch
+        ##########################################################
+
+  - alias: Bedtime - Reset Switch
+
+    trigger:
+      - platform: state
+        entity_id: input_boolean.bedtime
+        from: 'off'
+        to: 'on'
+        for:
+          hours: 0
+          minutes: 6
+          seconds: 0
+
+    action:
+      - service: homeassistant.turn_off
+        entity_id: input_boolean.bedtime
+       

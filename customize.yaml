@@ -1,0 +1,162 @@
+#################################################################
+## Customize
+#################################################################
+
+        ##########################################################
+        ## Thermostat
+        ##########################################################
+        
+  climate.main_floor:
+    friendly_name: Thermostat
+  sensor.living_room_thermostat_humidity:
+    icon: mdi:water-percent
+    friendly_name: Living Room Humidity
+  sensor.living_room_thermostat_temperature:
+    friendly_name: Living Room Temperature
+  sensor.living_room_thermostat_hvac_state:
+    hidden: true
+  sensor.living_room_thermostat_operation_mode:
+    hidden: true
+  sensor.living_room_thermostat_target:
+    hidden: true
+  binary_sensor.living_room_thermostat_fan:
+    hidden: true
+  binary_sensor.living_room_thermostat_has_leaf:
+    hidden: true
+  binary_sensor.living_room_thermostat_is_locked:
+    hidden: true
+  binary_sensor.living_room_thermostat_is_using_emergency_heat:
+    hidden: true
+  binary_sensor.living_room_thermostat_online:
+    hidden: true  
+    
+        ##########################################################
+        ## Nest Camera
+        ##########################################################
+        
+  binary_sensor.living_room_camera_motion_detected:
+    hidden: true
+  binary_sensor.living_room_camera_online:
+    hidden: true
+  binary_sensor.living_room_camera_person_detected:
+    hidden: true
+  binary_sensor.living_room_camera_sound_detected:
+    hidden: true
+    
+        ##########################################################
+        ## Door Bell
+        ##########################################################
+        
+  sensor.ring_front_door_battery:
+    friendly_name: Door Bell
+    icon: mdi:battery
+  sensor.ring_front_door_last_ding:
+    friendly_name: Front Door Last Ring
+    
+        ##########################################################
+        ## Weather
+        ##########################################################
+
+  sensor.dark_sky_temperature:
+    friendly_name: 'Outdoor Temperature'
+  sensor.dark_sky_summary:
+    friendly_name: 'Summary'
+  sensor.dark_sky_hourly_summary:
+    friendly_name: 'Hourly Summary'
+  sensor.dark_sky_minutely_summary:
+    friendly_name: 'Minute Summary'
+  sensor.dark_sky_daily_summary:
+    friendly_name: 'Daily Summary'
+  sensor.dark_sky_apparent_temperature:
+    icon: mdi:thermometer-lines
+    friendly_name: 'Apparent Temperature'
+  sensor.dark_sky_precip:
+    icon: mdi:weather-pouring
+    friendly_name: 'Precipitation'
+  sensor.dark_sky_precip_probability:
+    icon: mdi:weather-pouring
+    friendly_name: 'Precipitation Probability'
+  sensor.dark_sky_precip_intensity:
+    icon: mdi:weather-pouring
+    friendly_name: 'Rainfall'
+  sensor.dark_sky_humidity:
+    icon: mdi:water-percent
+    friendly_name: 'Outdoor Humidity'
+  sensor.dark_sky_cloud_coverage:
+    icon: mdi:weather-cloudy
+    friendly_name: 'Cloud Cover'
+  sensor.dark_sky_nearest_storm_distance:
+    icon: mdi:weather-lightning
+    friendly_name: 'Nearest Storm'
+  sensor.dark_sky_wind_speed:
+    icon: mdi:weather-windy
+    friendly_name: 'Wind Speed'
+  sensor.dark_sky_wind_bearing:
+    icon: mdi:weather-windy
+    friendly_name: 'Wind Bearing'
+  sensor.dark_sky_ozone:
+    icon: mdi:cloud
+    friendly_name: 'Ozone'
+  sensor.dark_sky_pressure:
+    icon: mdi:weight
+    friendly_name: 'Pressure'
+  sensor.dark_sky_dew_point:
+    friendly_name: 'Dew Point'
+  sensor.dark_sky_visibility:
+    friendly_name: 'Visibility'
+  sensor.dark_sky_nearest_storm_bearing:
+    hidden: true
+  sensor.yr_symbol:
+    hidden: true
+
+        ##########################################################
+        ## Friends and Family
+        ##########################################################
+        
+  device_tracker.samsungsmn920a:
+    icon: mdi:human-male
+    friendly_name: Ryan
+#  device_tracker.ac0d1bf24ecc:
+#    icon: mdi:human-female
+#    friendly_name: Michelle
+    
+        ##########################################################
+        ## Locks
+        ##########################################################
+        
+  lock.front_door_locked:
+    friendly_name: Front Door Lock
+  sensor.front_door_access_control:
+    hidden: true
+  sensor.front_door_alarm_level:
+    hidden: true
+  sensor.front_door_alarm_type:
+    hidden: true
+  sensor.front_door_burglar:
+    hidden: true
+  sensor.front_door_power_management:
+    hidden: true
+  sensor.front_door_sourcenodeid:
+    hidden: true
+  sensor.front_door_system:
+    hidden: true
+    
+        ##########################################################
+        ## Travel Times
+        ##########################################################
+        
+  sensor.Morning_Commute:
+    icon: mdi:car
+  sensor.Evening_Commute:
+    icon: mdi:car
+  sensor.Home_to_Houston:
+    icon: mdi:car
+    
+        ##########################################################
+        ## Z-Wave
+        ##########################################################
+    
+  zwave.aeotec_zw090_zstick_gen5_us:
+    hidden: true
+  zwave.front_door:
+    hidden: true

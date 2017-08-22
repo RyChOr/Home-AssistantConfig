@@ -1,0 +1,32 @@
+#################################################################
+## Audio Notification Automations
+#################################################################
+
+        ##########################################################
+        ## Alarm Audio Notification
+        ##########################################################
+
+- alias: Notification Audio - Alarm Audio
+
+  trigger:
+    - platform: state
+      entity_id: input_boolean.alarm_tripped
+      from: 'off'
+      to: 'on'
+
+  condition:
+#    - condition: state
+#      entity_id: group.household
+#      state: 'not_home'
+    - condition: state
+      entity_id: input_boolean.enable_security
+      state: 'on'
+
+  action:
+    - service: script.turn_on
+      entity_id: script.say
+      data:
+        variables:
+          volume: '.3'
+          what: 'You are not Authorized to be Here. Law Enforcement Has Been Notified' 
+           

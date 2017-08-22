@@ -1,0 +1,33 @@
+##############################################################
+## Input Boolean  ##
+##############################################################
+
+bedtime:
+  name: Bedtime
+  initial: off
+  icon: mdi:hotel
+    
+guest_mode:
+  name: Guest Mode
+  icon: mdi:human-male-female
+
+house_guest_away:
+  name: House Guest Away
+  icon: mdi:human-male-female
+ 
+enable_security:
+  name: Alarm Enabled
+  icon: mdi:shield-outline 
+ 
+alarm_tripped:
+  name: Alarm Tripped
+  icon: mdi:shield-outline 
+
+meal_time:
+  name: Meal Time
+  initial: off    
+
+speech_notifications:
+  name: Speech Notifications
+  icon: mdi:speaker-wireless
+  initial: on
